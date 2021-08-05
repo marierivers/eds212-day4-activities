@@ -1,0 +1,38 @@
+---
+title: "R Exploring"
+author: "Marie Rivers"
+date: "8/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+
+```{r}
+names(diamonds)
+dim(diamonds)
+summary(diamonds)
+head(diamonds)
+tail(diamonds)
+skimr::skim(diamonds)
+```
+```{r}
+skimr::skim(diamonds)
+```
+```{r}
+GGally::ggpairs(diamonds)
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = price, y = carat)) +
+  geom_point() 
+```
+```{r}
+ggplot(data = diamonds, aes(x = carat)) +
+  geom_histogram()
+```
+
